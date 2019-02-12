@@ -35,9 +35,15 @@
  *          new-line character added after it!
  */
 
+//
+
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    return {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast
+    };
 } 
 
 
@@ -45,14 +51,54 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
+//     takes a full-name String, like 'Max Gaudin', and 
+//  *         returns the contact object if found in the contacts-list, or, 
+//  *         undefined if the fullName does not match any contacts in the list.
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        }, 
+        addContact: function(contact){
+            return contacts.push(contact);
+        },
+        findContact: function(fullName){
+            for(var i = 0; i < contacts.length; i++){
+                //loop through array
+                let objectName = contacts[i].nameFirst + ' ' + contacts[i].nameLast;
+                //compare fullname param to objects inside of array
+                if(fullName === objectName){
+                    return contacts[i];
+                }
+                //return full object if found
+                //return undefined if no match
+                    
+            }
+            return undefined;
+        },
+//         removeContact(contact): takes a contact object to be removed from 
+//  *         the contact-list.
+        removeContact: function(contact){
+            for(var i = 0; i < contacts.length; i++){
+                if(contacts[i] === contact){
+                   return contacts.splice(i, 1);
+                }
+            }
+        },
+//         add a printAllContactNames() Function to your makeContactList() factory, so that the 
+//  *         contact-list returned has an all() API. The printAllContactNames() Function should 
+//  *         return a String formated with all the full-names of the separated 
+//  *         with a line-break, like so:
+        printAllContactNames: function(){
+            var fullName = "";
+            for(var i = 0; i < contacts.length; i++){
+                fullName += contacts[i].nameFirst + ' ' + contacts[i].nameLast + '\n'; 
+            }
+            return fullName.slice(0, fullName.length - 1);
         }
-    }
+    };
 }
 
 
