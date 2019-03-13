@@ -62,81 +62,95 @@
         // a. Uses the binary rep. of both operands does a bitwise OR operation and assigns
         //   to the variable.
 
-/*
-*   ARITHMETIC OPERATORS
-*   
-*   0. Addition: x + y
-*       a. Produces the sum of operands or concatenates a string.
-*
-*   1. Subtraction: x - y
-*       a. Subtracts two operands producing the difference.
-*
-*   2. Division: x / y
-*       a. Left operand is the dividend and the right operator is divisor.
-*
-*   3. Multipulcation: x * y
-*       a. Multiplies operands.
-*
-*   4. Remainder: 12 % 5 -> 2
-*       a. Returns the remainder left over after being divded. Takes sign of dividend.
-*
-*   5. Exponentiation: 2 ** 3 -> 8 -> because 2 * 2 * 2 is 8
-*       a. Returns result of raising first operand to the power of the second operand. 
-*
-*   6. Increment: ++ 
-*       a. Adds 1 to its operand and returns the final value.
-*
-*   7. Decrement: --
-*       a. Subtracts 1 to its operand and returns final value.
-*/
 
-/*
-*   COMPARISON OPERATORS and LOGICAL OPERATORS:
-*
-*   0.  The comparison operators are used to determine the difference or equality 
-*       in values or variables.
-*
-*   1. The == is loosely equals to. 
-*       Example: let x = 5
-*               x == 8 -> returns false
-*               x == 5 -> returns true
-*               x == '5' -> returns true
-*
-*   2. The === is STRICTLY equals to. 
-*       Example: x === 5 -> true
-*                x === '5' -> returns false bc 5 is a string
-*
-*   3. The != is not equal.
-*       Example: x != 8 -> returns true
-*
-*   4. The !== is not equal value or not equal type.
-*       Example: x !== 5 -> returns false
-*                x !== '5' -> returns true
-*
-*   5. The > is greater than.
-*       Example: x > 8 -> returns false
-*
-*   6. The < is less than.
-*       Example: x < 8 -> returns true
-*
-*   7. The >= greater than or equal to. 
-*       Example: x >= 8 -> returns false
-*
-*   8. The <= is less than or equal to.
-*       Example: x <= 8 -> returns true
-*
-*   LOGICAL:
-*
-*   1. The && is the and operator.
-*       Example: let x = 6, let y = 3
-*                x < 10 && y > 1 -> returns true
-*
-*   2. The || is the or operator.
-*       Example: x == 5 || y == 5 -> returns false
-*
-*   3. The ! is the NOT operator.
-*       Example: !(x == y) -> returns true
-*/
+  //  ARITHMETIC OPERATORS
+   
+  //  0. Addition: x + y
+  //      a. Produces the sum of operands or concatenates a string.
+       var x = 5;
+       var y = 3;
+       x + y; //8
+             
+
+  //  1. Subtraction: x - y
+  //      a. Subtracts two operands producing the difference.
+       var x = 2;
+       var y = 1;
+       x - y //1
+
+  //  2. Division: x / y
+  //      a. Left operand is the dividend and the right operator is divisor.
+       var x = 15;
+       var y = 5;
+       x / y; 
+       //3
+
+  //  3. Multipulcation: x * y
+  //      a. Multiplies operands.
+       var x = 2;
+       var y = 2;
+       x * y; //4
+
+  //  4. Remainder: 12 % 5 -> 2
+  //      a. Returns the remainder left over after being divded. Takes sign of dividend.
+       var x = 12;
+       var y = 5;
+       x % y; //2
+
+  //  5. Exponentiation: 2 ** 3 -> 8 -> because 2 * 2 * 2 is 8
+  //      a. Returns result of raising first operand to the power of the second operand. 
+
+  //  6. Increment: ++ 
+  //      a. Adds 1 to its operand and returns the final value.
+       var x = 3;
+       var y = x++; //y = 3, x = 4
+
+  //  7. Decrement: --
+  //      a. Subtracts 1 to its operand and returns final value.
+       var x = 3;
+       var y = x--; //y = 3, x = 2
+
+  //  1. The == is loosely equals to. 
+       let a = 5
+               a == 8 //-> returns false
+               a == 5 //-> returns true
+               a == '5' //-> returns true
+
+  //  2. The === is STRICTLY equals to. 
+                a === 5 //-> true
+                a === '5' //-> returns false bc 5 is a string
+
+  //  3. The != is not equal.
+                a != 8 //-> returns true
+
+  //  4. The !== is not equal value or not equal type.
+                a !== 5 //-> returns false
+                a !== '5' //-> returns true
+
+  //  5. The > is greater than.
+                a > 8 //-> returns false
+
+  //  6. The < is less than.
+                a < 8 //-> returns true
+
+  //  7. The >= greater than or equal to. 
+                a >= 8 //-> returns false
+
+  //  8. The <= is less than or equal to.
+                a <= 8 //-> returns true
+
+  //  LOGICAL:
+
+  //  1. The && is the and operator.
+            let b = 6 
+            let v = 3
+            b < 10 && v > 1 //-> returns true
+
+  //  2. The || is the or operator.
+            b == 5 || v == 5 //-> returns false
+
+  //  3. The ! is the NOT operator.
+           !(b == v) //-> returns true
 
   //  UNARY:
 
